@@ -386,6 +386,7 @@ public class SimpleHostRoutingFilter extends ZuulFilter
 			HttpGetWithBody httpGetWithBody = new HttpGetWithBody(uriWithQueryString);
 			httpRequest = httpGetWithBody;
 			httpGetWithBody.setEntity(entity);
+			break;
 		default:
 			httpRequest = new BasicHttpRequest(verb, uriWithQueryString);
 			log.debug(uriWithQueryString);
