@@ -5,20 +5,22 @@ import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
 import java.net.URI;
 
 public class HttpGetWithBody extends HttpEntityEnclosingRequestBase {
-    public static final String METHOD_NAME = "GET";
 
-    public HttpGetWithBody() {
-    }
+	public static final String METHOD_NAME = "GET";
 
-    public HttpGetWithBody(URI uri) {
-        this.setURI(uri);
-    }
+	public HttpGetWithBody() {
+	}
 
-    public HttpGetWithBody(String uri) {
-        this.setURI(URI.create(uri));
-    }
+	public HttpGetWithBody(URI uri) {
+		this.setURI(uri);
+	}
 
-    public String getMethod() {
-        return METHOD_NAME;
-    }
+	public HttpGetWithBody(String uri) {
+		this.setURI(URI.create(uri));
+	}
+
+	public String getMethod() {
+		return METHOD_NAME;
+	}
+
 }
